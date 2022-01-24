@@ -25,7 +25,7 @@ MODEL_NAME = 'dino-{}-ver.h5'.format(VERSION)
 model = tf.keras.models.load_model(MODEL_NAME)
 
 # Initialize activations for lstm
-train_data = np.load('training_data_v1.npy',allow_pickle=True)
+train_data = np.load('training_data_v2.npy',allow_pickle=True)
 
 
 
