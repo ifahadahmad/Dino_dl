@@ -24,21 +24,12 @@ MODEL_NAME = 'dino-{}-ver.h5'.format(VERSION)
 
 model = tf.keras.models.load_model(MODEL_NAME)
 
-# Initialize activations for lstm
-train_data = np.load('training_data_v2.npy',allow_pickle=True)
 
 
 
-
-train_data = train_data[:-4000]
-
-
-
-train_data_X = train_data[:,0]
-train_inter = np.array(train_data_X.tolist())
-train_speed = np.array(train_inter[:,1],dtype='float32')
-mean = np.mean(train_speed)
-stddev = np.std(train_speed)
+# calculated using training_data
+mean = 13.063546 				
+stddev = 2.7189937
 
 
 def main():
